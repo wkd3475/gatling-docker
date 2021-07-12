@@ -1,1 +1,1 @@
-docker run -it --rm -v ./user-files:/opt/gatling/user-files -v ./results:/opt/gatling/results denvazh/gatling
+docker run -it --rm -v $PWD/user-files:/opt/gatling/user-files -v $PWD/results:/opt/gatling/results denvazh/gatling
