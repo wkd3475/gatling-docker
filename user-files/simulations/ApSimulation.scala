@@ -18,11 +18,11 @@ class BasicSimulation extends Simulation {
     .exec(http("request_1")
       .get("/productpage"))
 
-  val range1 = 0 to 50 by 2
+  val range1 = 20 to 30 by 2
 
   val list = range1.toList
 
-  val list2 = list.map(x => constantUsersPerSec(x.toInt).during(5.seconds))
+  val list2 = list.map(x => constantUsersPerSec(x.toInt).during(10.seconds))
 
   setUp(
     scn.inject(
