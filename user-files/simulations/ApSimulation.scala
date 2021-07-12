@@ -1,4 +1,4 @@
-package test2
+package AP
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -18,9 +18,9 @@ class BasicSimulation extends Simulation {
     .exec(http("request_1")
       .get("/productpage"))
 
-  val src = Source.fromFile("/opt/gatling/user-files/resources/nasa-http-data.csv").getLines()
+  val range1 = 0 to 50 by 5
 
-  val list = src.toList
+  val list = range1.toList
 
   val list2 = list.map(x => constantUsersPerSec(x.toInt).during(5.seconds))
 
