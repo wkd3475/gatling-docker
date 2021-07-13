@@ -18,7 +18,7 @@ class BasicSimulation extends Simulation {
     .exec(http("request_1")
       .get("/test"))
 
-  val range1 = 0 to 2000 by 20
+  val range1 = 200 to 600 by 5
 
   val list = range1.toList
 
