@@ -1,0 +1,10 @@
+{
+  "simulation": "AP.BasicSimulation",
+  "simulationId": "basicsimulation",
+  "start": 1626138080273,
+  "description": "1000m 1024Mi replicas 1",
+  "scenarios": ["Scenario Name"],
+  "assertions": [
+
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "simulation": "AP.BasicSimulation",
+  "simulationId": "basicsimulation",
+  "start": 1626141342629,
+  "description": "c1 m1 r8",
+  "scenarios": ["Scenario Name"],
+  "assertions": [
+
+  ]
+}
