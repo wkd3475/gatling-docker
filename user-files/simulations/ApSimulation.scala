@@ -18,7 +18,7 @@ class BasicSimulation extends Simulation {
     .exec(http("request_1")
       .get("/productpage"))
 
-  val range1 = 20 to 30 by 2
+  val range1 = 40 to 80 by 2
 
   val list = range1.toList
 

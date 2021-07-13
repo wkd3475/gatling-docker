@@ -1,8 +1,8 @@
 {
   "simulation": "AP.BasicSimulation",
   "simulationId": "basicsimulation",
-  "start": 1626096441345,
-  "description": "",
+  "start": 1626137372766,
+  "description": "1000m 1024Mi replicas 1",
   "scenarios": ["Scenario Name"],
   "assertions": [
 
