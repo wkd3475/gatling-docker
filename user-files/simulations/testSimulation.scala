@@ -20,8 +20,9 @@ class BasicSimulation extends Simulation {
       .get("/test"))
 
   setUp(
-    scn.inject(constantUsersPerSec(500).during(200.seconds)).throttle(
-      reachRps(300).in(300.seconds)
+    scn.inject(constantUsersPerSec(1000).during(550.seconds)).throttle(
+      reachRps(1000).in(500.seconds),
+      holdFor(10.seconds)
     ).protocols(httpProtocol)
   )
 }
