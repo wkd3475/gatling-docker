@@ -13,14 +13,15 @@ class BasicSimulation extends Simulation {
     .acceptEncodingHeader("gzip, deflate")
     .acceptLanguageHeader("en-US,en;q=0.5")
     .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
-    
+    .shareConnections
+
   val scn = scenario("Scenario Name") // A scenario is a chain of requests and pauses
     .exec(http("request_1")
       .get("/test"))
 
   setUp(
-    scn.inject(
-      constantUsersPerSec(500) during(20 seconds)
+    scn.inject(constantUsersPerSec(500).during(200.seconds)).throttle(
+      reachRps(300).in(300.seconds)
     ).protocols(httpProtocol)
   )
 }

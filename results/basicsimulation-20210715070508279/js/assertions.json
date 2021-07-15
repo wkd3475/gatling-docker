@@ -1,0 +1,10 @@
+{
+  "simulation": "TEST.BasicSimulation",
+  "simulationId": "basicsimulation",
+  "start": 1626332708279,
+  "description": "",
+  "scenarios": ["Scenario Name"],
+  "assertions": [
+
+  ]
+}

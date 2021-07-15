@@ -17,9 +17,9 @@ class BasicSimulation extends Simulation {
 
   val scn = scenario("Scenario Name") // A scenario is a chain of requests and pauses
     .exec(http("request_1")
-      .get("/productpage"))
+      .get("/test"))
 
-  val range1 = 70 to 200 by 2
+  val range1 = 700 to 2000 by 2
 
   val list = range1.toList
 
