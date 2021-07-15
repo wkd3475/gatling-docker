@@ -13,12 +13,13 @@ class BasicSimulation extends Simulation {
     .acceptEncodingHeader("gzip, deflate")
     .acceptLanguageHeader("en-US,en;q=0.5")
     .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
-    
+    .shareConnections
+
   val scn = scenario("Scenario Name") // A scenario is a chain of requests and pauses
     .exec(http("request_1")
-      .get("/test"))
+      .get("/productpage"))
 
-  val range1 = 0 to 800 by 5
+  val range1 = 0 to 200 by 5
 
   val list = range1.toList
 
