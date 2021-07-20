@@ -1,4 +1,4 @@
-package test2
+package BASIC
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -16,13 +16,13 @@ class BasicSimulation extends Simulation {
 
   val scn = scenario("Scenario Name") // A scenario is a chain of requests and pauses
     .exec(http("request_1")
-      .get("/productpage"))
+      .get("/test"))
 
-  val src = Source.fromFile("/opt/gatling/user-files/resources/nasa-http-data.csv").getLines()
+  val src = Source.fromFile("/opt/gatling/user-files/resources/nasa-http-data-3.csv").getLines()
 
   val list = src.toList
 
-  val list2 = list.map(x => constantUsersPerSec(x.toInt).during(5.seconds))
+  val list2 = list.map(x => constantUsersPerSec(x.toInt).during(3.seconds))
 
   setUp(
     scn.inject(
