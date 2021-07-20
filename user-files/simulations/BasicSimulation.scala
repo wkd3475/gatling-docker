@@ -18,11 +18,11 @@ class BasicSimulation extends Simulation {
     .exec(http("request_1")
       .get("/test"))
 
-  val src = Source.fromFile("/opt/gatling/user-files/resources/nasa-http-data-3.csv").getLines()
+  val src = Source.fromFile("/opt/gatling/user-files/resources/cos_workload.csv").getLines()
 
   val list = src.toList
 
-  val list2 = list.map(x => constantUsersPerSec(x.toInt).during(3.seconds))
+  val list2 = list.map(x => constantUsersPerSec(x.toInt).during(5.seconds))
 
   setUp(
     scn.inject(
