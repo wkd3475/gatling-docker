@@ -8,7 +8,7 @@ import scala.io.Source
 
 class BasicSimulation extends Simulation {
   val httpProtocol = http
-    .baseUrl("http://163.152.30.77:32149") // Here is the root for all relative URLs
+    .baseUrl("http://ade510a0a7d3643ed8090c055082dcc6-169503839.ap-northeast-2.elb.amazonaws.com") // Here is the root for all relative URLs
     .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8") // Here are the common headers
     .acceptEncodingHeader("gzip, deflate")
     .acceptLanguageHeader("en-US,en;q=0.5")
@@ -19,11 +19,11 @@ class BasicSimulation extends Simulation {
     .exec(http("request_1")
       .get("/test"))
 
-  val range1 = 0 to 800 by 2
+  val range1 = 200 to 300 by 1
 
   val list = range1.toList
 
-  val list2 = list.map(x => constantUsersPerSec(x.toInt).during(2.seconds))
+  val list2 = list.map(x => constantUsersPerSec(x.toInt).during(1.seconds))
 
   setUp(
     scn.inject(
