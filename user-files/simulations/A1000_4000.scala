@@ -1,4 +1,4 @@
-package AP
+package A1000_4000
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
