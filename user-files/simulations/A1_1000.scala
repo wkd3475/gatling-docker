@@ -1,4 +1,4 @@
-package A0_4000
+package A1_1000
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -19,7 +19,7 @@ class BasicSimulation extends Simulation {
     .exec(http("request_1")
       .get("/test"))
 
-  val src = Source.fromFile("/opt/gatling/user-files/resources/nasa-http-data_0_4000.csv").getLines()
+  val src = Source.fromFile("/opt/gatling/user-files/resources/nasa-http-data_1_1000.csv").getLines()
 
   val range1 = src.toList
 
